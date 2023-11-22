@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Fot Beginners 2023</title>
-</head>
-<body>
-    <?php
+<?php
+
 $books = [
     [
         'name'        => 'The Art of Computer Programming, Vol. 2',
@@ -31,12 +24,5 @@ $books = [
 $filderedBooks = array_filter( $books, function ( $book ) {
     return $book['author'] === 'JK Rowling';
 } );
-?>
 
-        <ul>
-            <?php foreach ( $filderedBooks as $book ): ?>
-                <li><a href="<?= $book['publishUrl'] ?>"><?=$book['name']?></a></li>
-            <?php endforeach;?>
-        </ul>
-</body>
-</html>
+require 'index.view.php';
